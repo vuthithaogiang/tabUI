@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"
+        integrity="sha512-1qSuCpdoteBVxXOewHUBoVw+cvT1/kr+RuFK0HQsZFe6h7SEpm5VzXR1bBptPLyvQpxoaP/or5NUVRS4WwWgWA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Controller</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <h1>Hello, {{name}}</h1>
+
+    <button ng-click="click()">Click me</button>
+
+    <script>
+        // <!--Define an angular module-->
+        var app = angular.module('myApp', []);
+        console.log('app:', app);
+        
+        //define controller
+        app.controller('myCtrl', function ($scope){ // scope la phan lien ket voi modal
+            $scope.name = 'Giang';
+            $scope.click = function (){
+                if($scope.name == 'Giang'){
+                    $scope.name = "Tam";
+                }
+                else{
+                    $scope.name = "Thanh";
+                }
+            }
+
+            console.log($scope.name);
+
+            
+
+        });
+        console.log(app.controller());
+
+
+    </script>
+
+
+
+    <!--div ng-app ng-init="name='hello T2210A'">
+        <p> {{name}} class of FPT Aptech</p>
+
+    </div> /init dung de khoi tao-->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"
+    integrity="sha512-1qSuCpdoteBVxXOewHUBoVw+cvT1/kr+RuFK0HQsZFe6h7SEpm5VzXR1bBptPLyvQpxoaP/or5NUVRS4WwWgWA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</html>

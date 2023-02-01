@@ -1,0 +1,166 @@
+* {
+
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+.btn{
+
+    display: flex;
+    flex-direction:column;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 10px;
+    
+    width: 230px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+
+
+.btn-success{
+    background-color: #44bf5d;
+}
+
+.btn-success:hover{
+    background-color:#98d0a3;
+}
+
+.btn-failure{
+    background-color:#ff623d;
+}
+.btn-failure:hover{
+    background-color: #dc998a;
+}
+
+.btn-infor{
+    background-color: #2f86eb;
+}
+.btn-infor:hover{
+
+    background-color: #77a3d6;
+}
+
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 15px 0;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 24px;
+    min-width: 400px;
+    max-width: 450px;
+    max-height: 90px;
+    transition: all linear .3s;
+}
+
+@keyframes slideInLeft {
+
+    from {
+        opacity: 0;
+
+        transform: translateX(calc(100%));
+
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 9999;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+
+
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+
+.toast__body {
+    flex-grow: 1;
+
+}
+
+.toast__title {
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+
+    font-size: 14px;
+    color: #888;
+    margin-top: 4px;
+    line-height: 1.6;
+
+}
+
+.toast--success {
+    border-color: #44bf5d;
+
+}
+
+.toast--success .toast__icon {
+    color: #44bf5d;
+
+}
+
+.toast--infor {
+    border-color: #2f86eb;
+
+}
+
+.toast--infor .toast__icon {
+    color: #2f86eb;
+}
+
+.toast--failure {
+    border-color: #ff623d;
+
+}
+
+.toast--failure .toast__icon {
+    color: #ff623d;
+}
